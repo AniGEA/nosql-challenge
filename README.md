@@ -13,3 +13,17 @@ Use NoSQL_setup_starter.ipynb for this section of the challenge.
 - List the collection(s) in the database to ensure that establishments is there.
 - Find and display one document in the establishments collection using find_one and display with pprint.
 - Assign the establishments collection to a variable to prepare the collection for use.
+
+## Part 2: Update the Database
+
+Use NoSQL_setup_starter.ipynb for this section of the challenge.
+The magazine editors have some requested modifications for the database before you can perform any queries or analysis for them. Make the following changes to the establishments collection:
+1. An exciting new halal restaurant just opened in Greenwich, but hasn't been rated yet. The magazine has asked you to include it in your analysis. Add the following information to the database:
+<img width="756" alt="Screenshot 2024-04-29 at 23 15 12" src="https://github.com/AniGEA/nosql-challenge/assets/158235055/280730fe-9314-417b-b78b-671a7489e97e">
+
+2. Find the BusinessTypeID for "Restaurant/Cafe/Canteen" and return only the BusinessTypeID and BusinessType fields.
+3. Update the new restaurant with the BusinessTypeID you found.
+4. The magazine is not interested in any establishments in Dover, so check how many documents contain the Dover Local Authority. Then, remove any establishments within the Dover Local Authority from the database, and check the number of documents to ensure they were deleted.
+5. Some of the number values are stored as strings, when they should be stored as numbers.
+  1. Use update_many to convert latitude and longitude to decimal numbers.
+  2. Use update_many to convert RatingValue to integer numbers.
